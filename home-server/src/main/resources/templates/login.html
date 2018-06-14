@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <script type="text/javascript" th:src="@{/static/plugins/jquery.min.js}"></script>
+</head>
+<body>
+    <h1>这是登录页</h1>
+    <form id="login">
+        <div>
+            <lable>用户名</lable><input type="text" name="account"  placeholder="请输入用户名">
+            <label>密码</label>><input type="password" name="password" placeholder="请输入密码">
+        </div>
+        <div>
+            <input type="button" id="login-in" value="登录">
+        </div>
+    </form>
+    <script type="text/javascript" th:src="@{/static/js/login.js}"></script>
+</body>
+</html>
