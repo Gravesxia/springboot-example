@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <script type="text/javascript" th:src="@{/api-a/static/plugins/jquery.min.js}"></script>
+</head>
+<body>
+<h1>这是注册页面</h1>
+<div>
+    <form id="register">
+        <div><label>账号：</label><input type="text" name="account" placeholder="请输入账号信息"></div>
+        <div><label>姓名：</label><input type="text" name="name" placeholder="请输入姓名"></div>
+        <div><label>密码：</label><input type="password" name="password" placeholder="请输入密码"></div>
+        <div><label>电话号码：</label><input type="text" name="telephone" placeholder="请输入电话号码"></div>
+        <div>
+            <label>性别：</label>
+            <input type="radio" name="sex" value="1"><label>男</label>
+            <input type="radio" name="sex" value="2"><label>女</label>
+        </div>
+        <div><label>邮箱：</label><input type="email" name="email" placeholder="请输入邮箱"></div>
+        <div><label>地址：</label><input type="text" name="address" placeholder="请输入地址"></div>
+        <div><input type="button" id="submit" value="提交注册信息"></div>
+    </form>
+    <script type="text/javascript" th:src="@{/api-a/static/js/register.js}"></script>
+</div>
+</body>
+</html>

@@ -8,25 +8,20 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @Controller
+@RequestMapping("/index")
 public class PageController {
-
-    @RequestMapping("/")
-    public String index(){
-        return "index";
-    }
 
     @RequestMapping("/toLogin")
     public String toLogin(){
         return "login";
     }
 
-    @RequestMapping("/home")
-    public ModelAndView home(HttpSession session){
-        Object obj = session.getAttribute("userSession");
-        ModelAndView mv = new ModelAndView("/home");
-        mv.addObject("user",obj);
-        return mv;
+    @RequestMapping("/toRegister")
+    public String toRegister(){
+        return "register";
     }
+
+
     @RequestMapping("/logout")
     public void logout(HttpSession session, HttpServletResponse response) throws Exception{
         session.removeAttribute("userSession");

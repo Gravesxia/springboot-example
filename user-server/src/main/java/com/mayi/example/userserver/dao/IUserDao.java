@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface IUserDao {
     UserModel getUserByAccount(String account);
+
+    Integer registerUser(UserModel userModel);
 }

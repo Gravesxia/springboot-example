@@ -6,4 +6,11 @@
         select * from t_user where account = #{account}
     </select>
 
+    <insert id="registerUser" parameterType="UserModel" useGeneratedKeys="true" keyProperty="id">
+        insert into
+          t_user (name,account,password,sex,telephone,email,address,email_status,status,create_time)
+        VALUES
+          (#{name},#{account},@{password},#{sex},#{telephone},#{email},#{telephone},1,1,now())
+    </insert>
+
 </mapper>

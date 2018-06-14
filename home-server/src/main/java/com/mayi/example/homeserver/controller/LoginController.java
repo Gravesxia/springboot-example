@@ -25,6 +25,7 @@ public class LoginController {
         UserModel user = schedualUserServer.getUserByAccount(account);
         if(user != null && MD5Util.compareMd5(password,MD5Util.md5Password("abc123"))){
             request.getSession().setAttribute("userSession",user);
+            UserModel user1 = (UserModel)request.getSession().getAttribute("userSession");
             return "success";
         }
         return "error";

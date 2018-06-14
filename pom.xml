@@ -13,5 +13,6 @@
     <module>eureka-server</module>
     <module>home-server</module>
     <module>user-server</module>
+    <module>zuul-server</module>
   </modules>
 </project>

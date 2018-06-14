@@ -21,7 +21,7 @@ public class LoginInInterceptor implements HandlerInterceptor {
             return true;
         }
         String url = request.getRequestURI();
-        if(url.equals("/") || url.contains("/index") || url.contains("/toLogin") || url.contains("/login")){
+        if(url.equals("/") || url.contains("/index/") || url.contains("/login")){
             return true;
         }else if(url.contains("/error")){
             return false;
@@ -29,7 +29,7 @@ public class LoginInInterceptor implements HandlerInterceptor {
             Object user = request.getSession().getAttribute("userSession");
             if(user == null ){
                 // 未登录，重定向到登录页
-                response.sendRedirect("/toLogin");
+                response.sendRedirect("/index/toLogin");
                 return false;
             }
             return true;

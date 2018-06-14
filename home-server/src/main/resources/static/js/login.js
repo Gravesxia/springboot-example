@@ -3,11 +3,11 @@ $(function(){
         var obj = $('#login').serialize();
         $.ajax({
             type: "post",
-            url: "/login",
+            url: "/api-a/login",
             data: obj,// 要提交的表单
             success: function (res) {
                 if(res == "success"){
-                    window.location = "/home";
+                    window.location.href="/api-a/home/index";
                 }else{
                     alert("用户名或密码错误");
                 }

@@ -18,4 +18,8 @@ public class UserService implements IUserService{
         return userDao.getUserByAccount(account);
     }
 
+    public  Integer registerUser(UserModel userModel) {
+        return registerUser(userModel);
+    }
+
 }

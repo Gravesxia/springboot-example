@@ -5,4 +5,6 @@ import com.mayi.example.userserver.model.UserModel;
 
 public interface IUserService{
     UserModel getUserByAccount(String account);
+
+    Integer registerUser(UserModel userModel);
 }
